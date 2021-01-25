@@ -14,35 +14,15 @@ class Paddle(Turtle):
         self.goto(starting_x, 0)
     
     def paddle_up(self):
-        y = self.ycor()
-        y += PADDLE_MOVE_DISTANCE
-        self.sety(y)
+        if self.ycor() < 245:
+            y = self.ycor()
+            y += PADDLE_MOVE_DISTANCE
+            self.sety(y)
 
     def paddle_down(self):
-        y = self.ycor()
-        y -= PADDLE_MOVE_DISTANCE
-        self.sety(y)
+        if self.ycor() > -245:
+            y = self.ycor()
+            y -= PADDLE_MOVE_DISTANCE
+            self.sety(y)
 
 
-# # Function
-# def paddle_a_up():
-#     y = paddle_a.ycor()
-#     y += 20
-#     paddle_a.sety(y)
-
-
-# def paddle_a_down():
-#     y = paddle_a.ycor()
-#     y += -20
-#     paddle_a.sety(y)
-
-# def paddle_b_up():
-#     y = paddle_b.ycor()
-#     y += 20
-#     paddle_b.sety(y)
-
-
-# def paddle_b_down():
-#     y = paddle_b.ycor()
-#     y += -20
-#     paddle_b.sety(y)
